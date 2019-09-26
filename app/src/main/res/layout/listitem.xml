@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="88dp">
+
+    <ImageView
+        android:id="@+id/listImg"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_margin="16dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/ic_hotel_active"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@id/listImg">
+
+        <TextView
+            android:id="@+id/listCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Accommodation"
+            android:textSize="15dp"
+            android:textColor="#000"
+        />
+
+        <TextView
+            android:id="@+id/listMemo"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Bali Best Hotel"
+            android:textColor="#8a8a8a"
+            android:textSize="13dp"
+            android:layout_below="@id/listCategory"
+            android:layout_alignLeft="@id/listCategory"/>
+
+        <TextView
+            android:id="@+id/listDate"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="2016.07.06."
+            android:textColor="#8a8a8a"
+            android:textSize="12dp"
+            android:layout_below="@id/listMemo"
+            android:layout_alignLeft="@id/listMemo"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true">
+
+        <TextView
+            android:id="@+id/listArriveCurrency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="USD"
+            android:layout_marginRight="5dp"
+            android:textSize="12dp"
+            android:textColor="#000"/>
+
+        <TextView
+            android:id="@+id/listArriveValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:textSize="12dp"
+            android:textColor="#000"
+            android:layout_toRightOf="@id/listArriveCurrency"/>
+
+        <TextView
+            android:id="@+id/listDepartCurrency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KRW"
+            android:layout_marginRight="5dp"
+            android:textSize="12dp"
+            android:textColor="#8a8a8a"
+            android:layout_below="@id/listArriveCurrency"
+            android:layout_alignLeft="@id/listArriveCurrency"/>
+
+        <TextView
+            android:id="@+id/listDepartValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2,400"
+            android:textSize="12dp"
+            android:textColor="#8a8a8a"
+            android:layout_toRightOf="@id/listDepartCurrency"
+            android:layout_alignTop="@id/listDepartCurrency"/>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

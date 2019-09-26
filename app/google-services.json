@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "549171097369",
+    "firebase_url": "https://aile-tex-ac594.firebaseio.com",
+    "project_id": "aile-tex-ac594",
+    "storage_bucket": "aile-tex-ac594.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:549171097369:android:6f64f09e2091db62",
+        "android_client_info": {
+          "package_name": "com.aile.tex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "549171097369-tsitbv4mu8dvvdjnr0gajjr5ddk41o8g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aile.tex",
+            "certificate_hash": "B243BD73E1416CAB46B8BE4B57DBA68C7A77EEDC"
+          }
+        },
+        {
+          "client_id": "549171097369-hs79gpl1abjshcpavl5k59acf0mv7db1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6rargk8udp-Re_kHx_cZVrIQsjHSmQW8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "549171097369-hs79gpl1abjshcpavl5k59acf0mv7db1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

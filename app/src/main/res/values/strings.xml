@@ -1,0 +1,257 @@
+<resources>
+    <string name="app_name">Tex</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Common -->
+    <string name="tex_subtitle">manage to your travel expenses</string>
+    <string name="depart">Depart.</string>
+    <string name="arrive">Arrive.</string>
+
+    <!-- Drawer -->
+    <string name="drawer_summary_title">Summary</string>
+    <string name="drawer_summary_total">Total</string>
+    <string name="drawer_summary_spend">Spend</string>
+    <string name="drawer_summary_left">Left</string>
+    <string name="drawer_currency_title">Currency</string>
+    <string name="drawer_currency_update">"Last Update :"</string>
+
+    <!-- Setting -->
+    <string name="setting_hint_expense">Input Your Total Expense</string>
+    <string name="setting_btn_init">Init</string>
+    <string name="setting_init_comment">Are you sure you want to initialize?</string>
+
+    <!-- Dialog -->
+    <string name="dialog_confirm">CONFIRM</string>
+    <string name="dialog_cancel">CANCEL</string>
+    <string name="dialog_edit">EDIT</string>
+    <string name="dialog_delete">DELETE</string>
+    <string name="dialog_memo">Memo</string>
+    <string name="dialog_hint_memo">Take a memo</string>
+    <string name="dialog_input_hint_price">Input price here</string>
+
+    <!-- Toast -->
+    <string name="toast_input_price">Input Your Price</string>
+    <string name="toast_input_category">Select Your Category</string>
+    <string name="toast_no_connection">No Connection</string>
+    <string name="toast_update_done">Update Done</string>
+
+    <!-- Category -->
+    <string name="category_accommodation">Accommodation</string>
+    <string name="category_food">Food</string>
+    <string name="category_transportation">Transportation</string>
+    <string name="category_shopping">Shopping</string>
+    <string name="category_sightseeing">Sightseeing</string>
+    <string name="category_etc">Etc</string>
+
+    <!-- Tab Layout -->
+    <string name="tab_dashboard">DASHBOARD</string>
+    <string name="tab_history">HISTORY</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_left_expense">Left Expense</string>
+
+    <!-- Progress -->
+    <string name="progress_update">"Updating..."</string>
+
+    <string-array name="category">
+        <item>Accommodation</item>
+        <item>Transportation</item>
+        <item>Shopping</item>
+        <item>Meals</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="countries">
+        <item>South Korea</item>
+        <item>America</item>
+        <item>Europe</item>
+        <item>Japan</item>
+        <item>China</item>
+        <item>Hong Kong</item>
+        <item>Taiwan</item>
+        <item>England</item>
+        <item>Oman</item>
+        <item>Canada</item>
+        <item>Switzerland</item>
+        <item>Sweden</item>
+        <item>Australia</item>
+        <item>New Zealand</item>
+        <item>Czech</item>
+        <item>Chile</item>
+        <item>Turkey</item>
+        <item>Mongolia</item>
+        <item>Israel</item>
+        <item>Denmark</item>
+        <item>Norway</item>
+        <item>Saudi Arabia</item>
+        <item>Kuwait</item>
+        <item>Bahrain</item>
+        <item>Arab Emirates</item>
+        <item>Jordan</item>
+        <item>Egypt</item>
+        <item>Thailand</item>
+        <item>Singapore</item>
+        <item>Malaysia</item>
+        <item>Indonesia</item>
+        <item>Qatar</item>
+        <item>Kazakhstan</item>
+        <item>Brunei</item>
+        <item>India</item>
+        <item>Pakistan</item>
+        <item>Bangladesh</item>
+        <item>Philippines</item>
+        <item>Mexico</item>
+        <item>Brazil</item>
+        <item>Vietnam</item>
+        <item>South Africa</item>
+        <item>Russia</item>
+        <item>Hungary</item>
+        <item>Poland</item>
+    </string-array>
+
+    <string-array name="currency">
+        <item>KRW</item>
+        <item>USD</item>
+        <item>EUR</item>
+        <item>JPY</item>
+        <item>CNY</item>
+        <item>HKD</item>
+        <item>TWD</item>
+        <item>GBP</item>
+        <item>OMR</item>
+        <item>CAD</item>
+        <item>CHF</item>
+        <item>SEK</item>
+        <item>AUD</item>
+        <item>NZD</item>
+        <item>CZK</item>
+        <item>CLP</item>
+        <item>TRY</item>
+        <item>MNT</item>
+        <item>ILS</item>
+        <item>DKK</item>
+        <item>NOK</item>
+        <item>SAR</item>
+        <item>KWD</item>
+        <item>BHD</item>
+        <item>AED</item>
+        <item>JOD</item>
+        <item>EGP</item>
+        <item>THB</item>
+        <item>SGD</item>
+        <item>MYR</item>
+        <item>IDR</item>
+        <item>QAR</item>
+        <item>KZT</item>
+        <item>BND</item>
+        <item>INR</item>
+        <item>PKR</item>
+        <item>BDT</item>
+        <item>PHP</item>
+        <item>MXN</item>
+        <item>BRL</item>
+        <item>VND</item>
+        <item>ZAR</item>
+        <item>RUB</item>
+        <item>HUF</item>
+        <item>PLN</item>
+    </string-array>
+
+    <!--16.05.09. 기준-->
+    <string-array name="currency_default_rate">
+        <item>KRW / 0.0009</item>
+        <item>USD / 1.0000</item>
+        <item>EUR / 1.1405</item>
+        <item>JPY / 0.0093</item>
+        <item>CNY / 0.1539</item>
+        <item>HKD / 0.1289</item>
+        <item>TWD / 0.0308</item>
+        <item>GBP / 1.4431</item>
+        <item>OMR / 2.5976</item>
+        <item>CAD / 0.7747</item>
+        <item>CHF / 1.0282</item>
+        <item>SEK / 0.1228</item>
+        <item>AUD / 0.7367</item>
+        <item>NZD / 0.6839</item>
+        <item>CZK / 0.0422</item>
+        <item>CLP / 0.0015</item>
+        <item>TRY / 0.3416</item>
+        <item>MNT / 0.0005</item>
+        <item>ILS / 0.2640</item>
+        <item>DKK / 0.1533</item>
+        <item>NOK / 0.1218</item>
+        <item>SAR / 0.2666</item>
+        <item>KWD / 3.3303</item>
+        <item>BHD / 2.6544</item>
+        <item>AED / 0.2723</item>
+        <item>JOD / 1.4123</item>
+        <item>EGP / 0.1126</item>
+        <item>THB / 0.0285</item>
+        <item>SGD / 0.7346</item>
+        <item>MYR / 0.2500</item>
+        <item>IDR / 0.0001</item>
+        <item>QAR / 0.2747</item>
+        <item>KZT / 0.0031</item>
+        <item>BND / 0.7364</item>
+        <item>INR / 0.0150</item>
+        <item>PKR / 0.0096</item>
+        <item>BDT / 0.0128</item>
+        <item>PHP / 0.0212</item>
+        <item>MXN / 0.0560</item>
+        <item>BRL / 0.2854</item>
+        <item>VND / 0.00005</item>
+        <item>ZAR / 0.0673</item>
+        <item>RUB / 0.0152</item>
+        <item>HUF / 0.0036</item>
+        <item>PLN / 0.2572</item>
+    </string-array>
+
+    <string-array name="countries_currency">
+        <item>South Korea / KRW</item>
+        <item>America / USD</item>
+        <item>Europe / EUR</item>
+        <item>Japan / JPY</item>
+        <item>China / CNY</item>
+        <item>Hong Kong / HKD</item>
+        <item>Taiwan / TWD</item>
+        <item>England / GBP</item>
+        <item>Oman / OMR</item>
+        <item>Canada / CAD</item>
+        <item>Switzerland / CHF</item>
+        <item>Sweden / SEK</item>
+        <item>Australia / AUD</item>
+        <item>New Zealand / NZD</item>
+        <item>Czech / CZK</item>
+        <item>Chile / CLP</item>
+        <item>Turkey / TRY</item>
+        <item>Mongolia / MNT</item>
+        <item>Israel / ILS</item>
+        <item>Denmark / DKK</item>
+        <item>Norway / NOK</item>
+        <item>Saudi Arabia / SAR</item>
+        <item>Kuwait / KWD</item>
+        <item>Bahrain / BHD</item>
+        <item>Arab Emirates / AED</item>
+        <item>Jordan / JOD</item>
+        <item>Egypt / EGP</item>
+        <item>Thailand / THB</item>
+        <item>Singapore / SGD</item>
+        <item>Malaysia / MYR</item>
+        <item>Indonesia / IDR</item>
+        <item>Qatar / QAR</item>
+        <item>Kazakhstan / KZT</item>
+        <item>Brunei / BND</item>
+        <item>India / INR</item>
+        <item>Pakistan / PKR</item>
+        <item>Bangladesh / BDT</item>
+        <item>Philippines / PHP</item>
+        <item>Mexico / MXN</item>
+        <item>Brazil / BRL</item>
+        <item>Vietnam / VND</item>
+        <item>South Africa / ZAR</item>
+        <item>Russia / RUB</item>
+        <item>Hungary / HUF</item>
+        <item>Poland / PLN</item>
+    </string-array>
+
+</resources>

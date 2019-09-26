@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <include
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!-- Drawer Part-->
+    <LinearLayout
+        android:id="@+id/left_drawer"
+        android:layout_width="270dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#fff"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical" >
+
+        <!-- Information & Logo -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <!-- Depart / Arrive -->
+            <LinearLayout
+                android:id="@+id/infoCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="5dp">
+
+                <!-- Depart. -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/depart"
+                        android:textColor="#ffd34e"
+                        android:textSize="6pt"/>
+
+                    <TextView
+                        android:id="@+id/departInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Korea/KRW"
+                        android:textColor="#8a8a8a"
+                        android:textSize="6pt"/>
+
+                </LinearLayout>
+
+                <!-- Arrive. -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/arrive"
+                        android:textColor="#ffd34e"
+                        android:textSize="6pt"/>
+
+                    <TextView
+                        android:id="@+id/arriveInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="USA/USD"
+                        android:textColor="#8a8a8a"
+                        android:textSize="6pt"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/loadingLogo"
+                android:src="@drawable/logo"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_margin="5dp"
+                android:layout_below="@id/infoCountry"
+                android:layout_centerInParent="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/loadingLogo"
+                android:layout_centerInParent="true"
+                android:textColor="#8a8a8a"
+                android:textSize="7pt"
+                android:text="@string/tex_subtitle"/>
+
+        </RelativeLayout>
+
+        <!-- Summary -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#ffd34e">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/drawer_summary_title"
+                    android:textColor="#000"
+                    android:textSize="8pt"/>
+
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="1.5dp"
+                    android:background="#000"
+                    android:layout_marginTop="3dp"/>
+
+            </LinearLayout>
+
+            <!-- Total -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/drawer_summary_total"
+                    android:textColor="#000"
+                    android:textSize="8pt" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/totalArriveCurrency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="USD"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:textSize="8pt"
+                        android:textColor="#fff"/>
+
+                    <TextView
+                        android:id="@+id/totalArriveValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/totalArriveCurrency"
+                        android:layout_alignBaseline="@id/totalArriveCurrency"
+                        android:text="1,200"
+                        android:textSize="8pt"
+                        android:textColor="#fff"/>
+
+                    <TextView
+                        android:id="@+id/totalDepartCurrency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/totalArriveCurrency"
+                        android:layout_alignLeft="@id/totalArriveCurrency"
+                        android:text="KRW"
+                        android:layout_marginRight="5dp"
+                        android:textSize="6pt"
+                        android:textColor="#8a8a8a"/>
+
+                    <TextView
+                        android:id="@+id/totalDepartValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/totalDepartCurrency"
+                        android:layout_alignBaseline="@id/totalDepartCurrency"
+                        android:text="1,440,000"
+                        android:textSize="6pt"
+                        android:textColor="#8a8a8a"/>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <!-- Spend -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/drawer_summary_spend"
+                    android:textColor="#000"
+                    android:textSize="8pt" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/spendArriveCurrency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="USD"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:textSize="8pt"
+                        android:textColor="#fff"/>
+
+                    <TextView
+                        android:id="@+id/spendArriveValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/spendArriveCurrency"
+                        android:layout_alignBaseline="@id/spendArriveCurrency"
+                        android:text="563"
+                        android:textSize="8pt"
+                        android:textColor="#fff"/>
+
+                    <TextView
+                        android:id="@+id/spendDepartCurrency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/spendArriveCurrency"
+                        android:layout_alignLeft="@id/spendArriveCurrency"
+                        android:text="KRW"
+                        android:layout_marginRight="5dp"
+                        android:textSize="6pt"
+                        android:textColor="#8a8a8a"/>
+
+                    <TextView
+                        android:id="@+id/spendDepartValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/spendDepartCurrency"
+                        android:layout_alignBaseline="@id/spendDepartCurrency"
+                        android:text="675,600"
+                        android:textSize="6pt"
+                        android:textColor="#8a8a8a"/>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <!-- Left -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/drawer_summary_left"
+                    android:textColor="#000"
+                    android:textSize="8pt" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/leftArriveCurrency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="USD"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:textSize="8pt"
+                        android:textColor="#fff"/>
+
+                    <TextView
+                        android:id="@+id/leftArriveValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/leftArriveCurrency"
+                        android:layout_alignBaseline="@id/leftArriveCurrency"
+                        android:text="637"
+                        android:textSize="8pt"
+                        android:textColor="#fff"/>
+
+                    <TextView
+                        android:id="@+id/leftDepartCurrency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/leftArriveCurrency"
+                        android:layout_alignLeft="@id/leftArriveCurrency"
+                        android:text="KRW"
+                        android:layout_marginRight="5dp"
+                        android:textSize="6pt"
+                        android:textColor="#8a8a8a"/>
+
+                    <TextView
+                        android:id="@+id/leftDepartValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/leftDepartCurrency"
+                        android:layout_alignBaseline="@id/leftDepartCurrency"
+                        android:text="767,400"
+                        android:textSize="6pt"
+                        android:textColor="#8a8a8a"/>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout> <!-- End of Summary -->
+
+        <!-- Currency -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#fafafa">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/drawer_currency_title"
+                    android:textColor="#000"
+                    android:textSize="8pt"/>
+
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="1.5dp"
+                    android:background="#000"
+                    android:layout_marginTop="3dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:orientation="horizontal">
+
+                <!-- Change USD <-> KRW -->
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp">
+
+                    <TextView
+                        android:id="@+id/currencyArriveCurrency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="USD"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginRight="5dp"
+                        android:textSize="9pt"
+                        android:textColor="#000"/>
+
+                    <TextView
+                        android:id="@+id/currencyArriveValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/currencyArriveCurrency"
+                        android:layout_alignBaseline="@id/currencyArriveCurrency"
+                        android:text="1"
+                        android:textSize="9pt"
+                        android:textColor="#000"/>
+
+                    <TextView
+                        android:id="@+id/currencyDepartCurrency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/currencyArriveCurrency"
+                        android:layout_alignLeft="@id/currencyArriveCurrency"
+                        android:text="KRW"
+                        android:layout_marginRight="5dp"
+                        android:textSize="9pt"
+                        android:textColor="#000"/>
+
+                    <TextView
+                        android:id="@+id/currencyDepartValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/currencyDepartCurrency"
+                        android:layout_alignBaseline="@id/currencyDepartCurrency"
+                        android:text="1,099.05"
+                        android:textSize="9pt"
+                        android:textColor="#000"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="@string/drawer_currency_update"
+                    android:textSize="6pt"
+                    android:textColor="#8a8a8a"/>
+
+                <TextView
+                    android:id="@+id/updateDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="2016. 03. 20."
+                    android:textSize="6pt"
+                    android:textColor="#8a8a8a"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
